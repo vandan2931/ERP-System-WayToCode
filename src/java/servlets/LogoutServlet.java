@@ -1,0 +1,34 @@
+package servlets;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import constants.Constants;
+
+public class LogoutServlet extends HttpServlet {
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.removeAttribute(Constants.SESSION_USER_NAME);
+            session.removeAttribute(Constants.SESSION_USER_ID);
+            session.removeAttribute(Constants.SESSION_USER_ROLE);
+            session.invalidate();
+        }
+
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setHeader("Pragma", "no-cache");
+        response.setDateHeader("Expires", 0);
+
+        response.sendRedirect("index.html?logout=true");
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
+    }
+}
