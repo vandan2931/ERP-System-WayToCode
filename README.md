@@ -55,8 +55,8 @@ WayToCodeERPSystem/
      ```java
      // src/your/package/DBConnection.java
      String url = "jdbc:mysql://localhost:3306/erp_system";
-     String user = "your_username";
-     String pass = "your_password";
+     String user = "root";
+     String pass = "";
      ```
 
 4. **Run in NetBeans**
