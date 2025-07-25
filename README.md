@@ -1,6 +1,16 @@
+
+```markdown
 # 🏢 ERP System - WayToCode
 
 This is a full-featured **Enterprise Resource Planning (ERP) System** developed using Java Servlets, JSP, MySQL, and JDBC. It provides modules for employee management, leave tracking, project assignments, admin approvals, and report generation.
+
+---
+
+## 📽️ Live Demo
+
+▶️ [Click here to watch the live demo](https://drive.google.com/drive/folders/18GT3-rb4-gPUo6YY4-fRQmQYnBX9W3Xq?usp=drive_link)
+
+> This video walkthrough demonstrates user signup/login, leave requests, admin approval, project assignments, and real-time reporting.
 
 ---
 
@@ -19,13 +29,15 @@ This is a full-featured **Enterprise Resource Planning (ERP) System** developed 
 ## 📂 Project Structure
 
 ```
+
 WayToCodeERPSystem/
 ├── src/                          # Java Servlets, DAO, Bean files
 ├── web/                          # JSPs, CSS, JS, images
-├── database/erp_system.sql       # SQL database dump
+├── database/erp\_system.sql       # SQL database dump
 ├── nbproject/                    # NetBeans IDE configuration
 └── README.md                     # Project documentation
-```
+
+````
 
 ---
 
@@ -44,14 +56,25 @@ WayToCodeERPSystem/
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/vandan2931/ERP-System-WayToCode.git
-   ```
+````
 
 2. **Database Setup**
-   - Create MySQL database: `erp_system`
-   - Import schema: `database/erp_system.sql`
 
-3. **Configure Connection**
-   - Update credentials in:
+   * Create a new database:
+
+     ```sql
+     CREATE DATABASE erp_system;
+     ```
+   * Import the schema:
+
+     ```bash
+     mysql -u root -p erp_system < database/erp_system.sql
+     ```
+
+3. **Configure Database Connection**
+
+   * Update the credentials in:
+
      ```java
      // src/your/package/DBConnection.java
      String url = "jdbc:mysql://localhost:3306/erp_system";
@@ -60,52 +83,72 @@ WayToCodeERPSystem/
      ```
 
 4. **Run in NetBeans**
-   - Open project folder in NetBeans
-   - Deploy to Tomcat server
-   - Access at: `http://localhost:8080/WayToCodeERPSystem`
+
+   * Open the project folder in NetBeans
+   * Deploy to Tomcat server
+   * Access via: `http://localhost:8080/WayToCodeERPSystem`
 
 ---
 
 ## 📘 Core Modules
 
-| Module            | Description                                  |
-|-------------------|---------------------------------------------|
-| **Authentication**| Secure login/logout for all users           |
-| **Leave**         | Apply/view leave requests (Admin approval)  |
-| **Projects**      | Task assignment and progress tracking       |
-| **Admin Console** | User management and system configuration    |
-| **Reporting**     | Generate PDF/Excel reports with analytics   |
+| Module             | Description                                |
+| ------------------ | ------------------------------------------ |
+| **Authentication** | Secure login/logout for all users          |
+| **Leave**          | Apply/view leave requests (Admin approval) |
+| **Projects**       | Task assignment and progress tracking      |
+| **Admin Console**  | User management and system configuration   |
+| **Reporting**      | Generate PDF/Excel reports with analytics  |
 
 ---
 
 ## 👨‍💻 Developer Information
 
-- **Name**: Vandan Shah
-- **Location**: Ahmedabad, Gujarat, India  
-- **Role**: Full Stack Java Developer  
-- **GitHub**: [vandan2931](https://github.com/vandan2931)  
+* **Name**: Vandan Shah
+* **Location**: Ahmedabad, Gujarat, India
+* **Role**: Full Stack Java Developer
+* **GitHub**: [@vandan2931](https://github.com/vandan2931)
 
 ---
 
 ## 📜 License
 
 This project is licensed for educational use. You may:
-- Use for learning purposes
-- Modify for personal projects
-- Adapt for internal organizational use
 
-*Commercial use requires explicit permission.*
+* Use for learning purposes
+* Modify for personal projects
+* Adapt for internal organizational use
+
+> **Note:** Commercial use requires explicit permission from the developer.
 
 ---
 
 ## 🤝 Contributing
 
+We welcome contributions! Here's how to get started:
+
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
+2. Create your feature branch
+
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. Commit your changes
+
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+4. Push the changes
+
+   ```bash
+   git push origin feature/your-feature
+   ```
 5. Open a Pull Request
 
-*For major changes, please open an issue first to discuss proposed changes.*
-```
+*For major changes, please open an issue first to discuss the improvements.*
+
+---
+
+> 💡 *Built for academic, personal, and portfolio use to demonstrate a complete Java Full Stack ERP system with real-time leave and project management.*
+
 
