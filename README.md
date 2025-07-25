@@ -1,5 +1,3 @@
-
-```markdown
 # 🏢 ERP System - WayToCode
 
 This is a full-featured **Enterprise Resource Planning (ERP) System** developed using Java Servlets, JSP, MySQL, and JDBC. It provides modules for employee management, leave tracking, project assignments, admin approvals, and report generation.
